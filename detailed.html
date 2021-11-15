@@ -96,13 +96,35 @@
     let td4 = document.createElement("td");
     let td5 = document.createElement("td");
     let td6 = document.createElement("td");
+    
+    var no_info = "정보 없음";
     td1.appendChild(document.createTextNode(obj.lbrry_name));
-    td2.appendChild(document.createTextNode(obj.tel_no));
-    let link = document.createElement("a");
-    link.innerHTML = '<a href="'+obj.hmpg_url+'">'+obj.hmpg_url+'</a>';
-    td3.appendChild(link);
-    td4.appendChild(document.createTextNode(obj.op_time));
-    td5.appendChild(document.createTextNode(obj.fdrm_close_date));
+    if(obj.tel_no == null){
+      td2.appendChild(document.createTextNode(no_info));
+    }else{
+      td2.appendChild(document.createTextNode(obj.tel_no));
+    }
+    
+    if(obj.hmpg_url == null){
+      td3.appendChild(document.createTextNode(no_info));
+    }else{
+      let link = document.createElement("a");
+      link.innerHTML = '<a href="'+obj.hmpg_url+'">'+obj.hmpg_url+'</a>';
+      td3.appendChild(link);
+    }
+    
+    if(obj.op_time == null){
+      td4.appendChild(document.createTextNode(no_info));
+    }else{
+      td4.appendChild(document.createTextNode(obj.op_time));
+    }
+    
+    if(obj.fdrm_close_date == null){
+      td5.appendChild(document.createTextNode(no_info));
+    }else{
+      td5.appendChild(document.createTextNode(obj.fdrm_close_date));
+    }
+
     td6.appendChild(document.createTextNode(obj.adres));
 
     tr1.appendChild(th1); tr1.appendChild(td1);
@@ -134,6 +156,11 @@
     var lat = obj.xcnts;
     var lng = obj.ydnts;
     
+    if(rtime == null){
+      rtime = "운영시간 정보 없음";
+    }
+    //console.log("지도 op_time 정보 없음");
+    
     var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
     mapOption = { 
         center: new kakao.maps.LatLng(lat, lng), // 지도의 중심좌표
@@ -155,7 +182,7 @@
     marker.setMap(map);
     
     // 마커를 클릭했을 때 마커 위에 표시할 인포윈도우를 생성합니다
-    var iwContent = '<div style="text-align:center; padding:5px; width:300px;">'+name+' <br>'+rtime+'</div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+    var iwContent = '<div style="text-align:center; padding:5px; width:400px;">'+name+' <br>'+rtime+'</div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
         iwRemoveable = true; // removeable 속성을 ture 로 설정하면 인포윈도우를 닫을 수 있는 x버튼이 표시됩니다
 
     // 인포윈도우를 생성합니다
