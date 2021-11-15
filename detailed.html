@@ -124,8 +124,12 @@
     }else{
       td5.appendChild(document.createTextNode(obj.fdrm_close_date));
     }
-
-    td6.appendChild(document.createTextNode(obj.adres));
+    
+    if(obj.adres == null){
+      td6.appendChild(document.createTextNode(no_info));
+    }else{
+      td6.appendChild(document.createTextNode(obj.adres));
+    }
 
     tr1.appendChild(th1); tr1.appendChild(td1);
     tr2.appendChild(th2); tr2.appendChild(td2);
@@ -161,6 +165,7 @@
     }
     //console.log("지도 op_time 정보 없음");
     
+   
     var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
     mapOption = { 
         center: new kakao.maps.LatLng(lat, lng), // 지도의 중심좌표
