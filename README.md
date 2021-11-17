@@ -22,6 +22,9 @@
 ![detailed](doc/detailed.png)
 3) 지도를 통해 도서관 정보를 볼 수 있습니다.
 ![mapAdjust](doc/mapmag.png)
+4) 홈페이지 주소를 클릭하면 해당 도서관의 홈페이지로 이동합니다.
+![exampleSite](doc/examplesite.png)
+
 
 ## Example
 

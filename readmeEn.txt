@@ -23,6 +23,9 @@ This site shows all the libraries in Seoul with its location and information.
 ![detailed](doc/detailed.png)
 3) Map can show library location.
 ![mapAdjust](doc/mapmag.png)
+4) Clicking web address will open corresponding library website.
+![exampleSite](doc/examplesite.png)
+
 
 ## Example
 
