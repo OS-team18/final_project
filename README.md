@@ -3,11 +3,11 @@
 ## 설명
 
 ---
-
 서울시에 존재하는 모든 도서관 정보 및 위치를 확인할 수 있는 사이트입니다.
 
 ## 설치방법
 
+---
  git clone https://github.com/OS-team18/final_project.git  
  git clone git@github.com:OS-team18/final_project.git  
  
