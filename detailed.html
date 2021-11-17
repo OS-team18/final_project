@@ -47,6 +47,7 @@
       const param = new URLSearchParams(sear);
       const idx = param.get('lbrry_seq_no');
       //console.log(idx);
+      const nodatamassage = "해당 정보가 존재하지 않습니다."
 
       window.addEventListener("load", () => {
         fetch("library_seoul.json")
@@ -61,7 +62,7 @@
   
                 Object.keys(obj).forEach(feature => {
                     if(obj[feature] == null){
-                        obj[feature] = "값이 존재하지 않음";
+                        obj[feature] = nodatamassage;
                     }
                 })
 
@@ -106,7 +107,15 @@
         td2.appendChild(document.createTextNode(obj.tel_no));
         let link = document.createElement("a");
         link.innerHTML = '<a href="'+obj.hmpg_url+'">'+obj.hmpg_url+'</a>';
-        td3.appendChild(link);
+
+        if (obj.hmpg_url === nodatamassage) {
+            td3.appendChild(document.createTextNode(nodatamassage));
+        } else {
+            let link = document.createElement("a");
+            link.innerHTML = '<a href="'+obj.hmpg_url+'">'+obj.hmpg_url+'</a>';
+            td3.appendChild(link);
+        }
+
         td4.appendChild(document.createTextNode(obj.op_time));
         td5.appendChild(document.createTextNode(obj.fdrm_close_date));
         td6.appendChild(document.createTextNode(obj.adres));
