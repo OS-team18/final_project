@@ -17,8 +17,11 @@
 [서울시 도서관 위치 정보 사이트](https://os-team18.github.io/final_project/)  
 
 1) 도서관의 이름과 간단한 정보를 보여줍니다  
+![index](doc/index.png)
 2) 사용자가 상세정보 버튼을 클릭하면 더 많은 정보 (전화번호, 도서관 웹사이트, 운영시간 등)을 볼 수 있습니다.
+![detailed](doc/detailed.png)
 3) 지도를 통해 도서관 정보를 볼 수 있습니다.
+![mapAdjust](doc/mapmag.png)
 
 ## Example
 
