@@ -2,12 +2,10 @@
 
 ## 설명
 
----
 서울시에 존재하는 모든 도서관 정보 및 위치를 확인할 수 있는 사이트입니다.
 
 ## 설치방법
 
----
  git clone https://github.com/OS-team18/final_project.git  
  git clone git@github.com:OS-team18/final_project.git  
  
@@ -16,7 +14,6 @@
 
 ## 사용방법
 
----
 [사이트](https://os-team18.github.io/final_project/)  
 
 1) 도서관의 이름과 간단한 정보를 보여줍니다  
@@ -24,14 +21,11 @@
 3) 지도를 통해 도서관 정보를 볼 수 있습니다.
 
 ## Example
----
 
 ## 버전
----
 v1.0.0 - 도서관 정보 (이름 및 주소 (구))표로 표시 및 상세 정보 버튼 클릭시 도서관 상세정보 및 위치 지도에 표시
 
 ## API
----
  카카오 개발자에서 제공하는 'Kakao 지도 Web API'를 사용하였습니다.  
  [Kakao 지도 Web API](https://apis.map.kakao.com/web/guide/)  
  해당 사이트에서 카카오 계정을 이용하여 api key를 발급받을 수 있습니다.
