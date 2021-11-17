@@ -6,8 +6,8 @@
 
 ## 설치방법
 
- 'git clone https://github.com/OS-team18/final_project.git'
- 'git clone git@github.com:OS-team18/final_project.git'  
+ `git clone https://github.com/OS-team18/final_project.git`  
+ `git clone git@github.com:OS-team18/final_project.git`  
  
  local repository에서 html파일을 열 경우, json파일을 읽어오지 않습니다. Visual Studio Code에서 'Live Server'를 이용하거나 '사용방법'에 존재하는 사이트로 들어가서 사용하세요.  
  'Kakao 지도 Web API'를 사용하였기 때문에 따로 사이트를 만들 경우 api key를 발급받아야 합니다. 자세한 내용은 'API'부분을 참고하세요.
