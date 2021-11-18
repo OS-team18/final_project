@@ -17,11 +17,11 @@ local repository에서 html파일을 열 경우, json파일을 읽어오지 않�
 [서울시 도서관 위치 정보 사이트](https://os-team18.github.io/final_project/)
 
 1. 사이트 사용 방법을 보여줍니다.
-   ![main_page](doc/main_page.png)
+   ![main_page](doc/main_page.PNG)
 2. <strong>지도에서 도서관 찾기</strong>의 'Go'를 클릭하면 지도에 모든 도서관의 위치가 표시됩니다.
-   ![all_library](doc/all_library.png)
+   ![all_library](doc/all_library.PNG)
 3. 위치 마크를 클릭한 후 도서관 이름이 나오며 도서관 이름을 클릭하면 도서관 정보를 볼 수 있습니다.
-   ![click](doc/click.png)
+   ![click](doc/click.PNG)
 4. 메인 페이지에서 <strong>리스트에서 도서관 찾기</strong>의 'Go'를 클릭하면 간단한 도서관 정보를 볼 수 있습니다.
    ![index](doc/index.png)
 5. 사용자가 상세정보 버튼을 클릭하면 더 많은 정보 (전화번호, 도서관 웹사이트, 운영시간 등)을 볼 수 있습니다.
