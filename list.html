@@ -28,6 +28,16 @@
       </div>
       <div class="container">
         <div class="d-flex align-items-center mb-2 mt-2">
+          <!--dropdown-->
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">모든 도서관</button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><a class="dropdown-item" id="allLib" href="#">모든 도서관</a></li>
+              <li><a class="dropdown-item" id="availableLib" href="#">이용 가능</a></li>
+              <li><a class="dropdown-item" id="favoriteLib" href="#">즐겨찾기</a></li>
+            </ul>
+          </div>
+          <!--검색창-->
           <input
             type="text"
             class="form-control"
@@ -126,8 +136,11 @@
           });
       });
 
+
       let button = document.querySelector("#search");
-      button.addEventListener("click", () => {
+      button.addEventListener("click", searching);
+
+      function searching() {
         let input = document.querySelector("#search-input");
         let text = input.value;
 
@@ -147,16 +160,50 @@
             addToTable(value);
           }
         })
-        
-      });
-
-
+      }
 
       function send_detail(idx){
         //console.log(idx);
         //location.href = "detailed.html?lbrry_seq_no="+idx;
         window.open("detailed.html?lbrry_seq_no="+idx, "_blank");
       }
+
+
+      // dropdown
+      document.querySelectorAll(".dropdown-item").forEach(item => {
+        item.addEventListener("click", () => {
+          let optionButton = document.querySelector("#dropdownMenuButton1");
+          optionButton.innerHTML = item.innerHTML;
+        })
+      })
+
+      // 모든 도서관
+      document.querySelector("#allLib").addEventListener("click", searching)
+
+      // 이용 가능
+      document.querySelector("#availableLib").addEventListener("click", () =>{
+        var currentDate = new Date();
+        var currentTime = 
+        alert("not yet implented"+ currentDate);
+      })
+
+      // 즐겨찾기
+      let bookmarkList = [2413, 1571]
+
+      document.querySelector("#favoriteLib").addEventListener("click", () =>{
+        let input = document.querySelector("#search-input");
+        let text = input.value;
+        
+        document.querySelectorAll(".li_info").forEach((value) => {
+            value.remove();
+        })
+        li.forEach((value) => {
+          if (value.lbrr_name.includes(text) &&  bookmarkList.includes(value.lbrry_seq_no)){
+            addToTable(value);
+          }
+        })
+      })
+
     </script>
 
 
