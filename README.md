@@ -31,6 +31,9 @@ local repository에서 html파일을 열 경우, json파일을 읽어오지 않�
 7. 홈페이지 주소를 클릭하면 해당 도서관의 홈페이지로 이동합니다.
    ![exampleSite](doc/examplesite.png)
 
+# 사용 영상
+[![samplevideo](doc/main_page.PNG)](https://www.youtube.com/watch?v=Hr6WYuyWJto)
+
 ## 버전
 
 v1.0.0 - 도서관 정보 (이름 및 주소 (구))표로 표시 및 상세 정보 버튼 클릭시 도서관 상세정보 및 위치 지도에 표시  
