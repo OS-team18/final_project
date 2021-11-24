@@ -136,6 +136,11 @@
           });
       });
 
+      // 즐겨찾기 로컬 스토리지 생성
+      if (localStorage.getItem("bookmarkData") === null){
+        localStorage.setItem("bookmarkData", JSON.stringify([]));
+      }
+      let bookmarkList = JSON.parse(localStorage.getItem("bookmarkData"));
 
       // 검색 버튼
       let button = document.querySelector("#search");
@@ -144,6 +149,7 @@
       function searchingWithCondition(checkfunc) {
         let input = document.querySelector("#search-input");
         let text = input.value;
+        bookmarkList = JSON.parse(localStorage.getItem("bookmarkData"));
 
         document.querySelectorAll(".li_info").forEach((value) => {
             value.remove();
@@ -177,11 +183,10 @@
         searchingWithCondition(dateCheck)
       }
 
+      
+ 
       // dropdown
       var curfilter = searching;
-      // let bookmarkList = JSON.parse(localStorage.getItem("bookmarkData"));
-      let bookmarkList = [2413, 1571]
-
       document.querySelectorAll(".dropdown-item").forEach(item => {
         item.addEventListener("click", () => {
           let optionButton = document.querySelector("#dropdownMenuButton1");
