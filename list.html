@@ -33,7 +33,7 @@
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">모든 도서관</button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
               <li><a class="dropdown-item" id="allLib" href="#">모든 도서관</a></li>
-              <li><a class="dropdown-item" id="availableLib" href="#">이용 가능</a></li>
+              <!--<li><a class="dropdown-item" id="availableLib" href="#">이용 가능</a></li>-->
               <li><a class="dropdown-item" id="favoriteLib" href="#">즐겨찾기</a></li>
             </ul>
           </div>
@@ -201,12 +201,13 @@
         })
 
         // 이용 가능
+        /*
         document.querySelector("#availableLib").addEventListener("click", () =>{
           curfilter = searchingDate;
           document.querySelector("#search").addEventListener("click", searchingDate);
           document.querySelector("#search").click();
         })
-
+        */
         // 즐겨찾기
         document.querySelector("#favoriteLib").addEventListener("click", () =>{
           curfilter = searchingBook;
