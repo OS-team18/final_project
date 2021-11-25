@@ -11,6 +11,6 @@ table td {
 }
 
 .scrolltable {
-    max-height: 800px;
+    max-height: 700px;
     overflow: overlay;
 }
