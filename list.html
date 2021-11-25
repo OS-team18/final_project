@@ -146,6 +146,19 @@
       let button = document.querySelector("#search");
       button.addEventListener("click", searching)
 
+      function searching() {
+        searchingWithCondition(check)
+      }
+
+      function searchingBook() {
+        searchingWithCondition(bookCheck)
+      }
+
+      function searchingDate() {
+        alert("not yet implented");
+        //searchingWithCondition(dateCheck)
+      }
+
       function searchingWithCondition(checkfunc) {
         let input = document.querySelector("#search-input");
         let text = input.value;
@@ -170,20 +183,6 @@
         }
       };
 
-
-      function searching() {
-        searchingWithCondition(check)
-      }
-
-      function searchingBook() {
-        searchingWithCondition(bookCheck)
-      }
-
-      function searchingDate() {
-        searchingWithCondition(dateCheck)
-      }
-
-      
  
       // dropdown
       var curfilter = searching;
@@ -203,7 +202,6 @@
 
         // 이용 가능
         document.querySelector("#availableLib").addEventListener("click", () =>{
-          alert("not yet implented")
           curfilter = searchingDate;
           document.querySelector("#search").addEventListener("click", searchingDate);
           document.querySelector("#search").click();
