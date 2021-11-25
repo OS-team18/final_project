@@ -100,7 +100,7 @@
                     bookButton.ariaPressed = "true";
                     bookButton.innerHTML = "Already Bookmarked";
                     bookButton.classList.remove("btn-primary");
-                    bookButton.classList.add("btn-default");
+                    bookButton.classList.add("btn-success");
                 }
 
                 bookButton.addEventListener("click", () => {
@@ -109,7 +109,7 @@
                         bookButton.classList.remove("activate");
                         bookButton.classList.add("deactivate");
                         bookButton.innerHTML = "Press to Bookmark";
-                        bookButton.classList.remove("btn-default");
+                        bookButton.classList.remove("btn-success");
                         bookButton.classList.add("btn-primary");
 
                         // 북마크 목록에서 제거
@@ -129,7 +129,7 @@
                         bookButton.classList.add("activate");
                         bookButton.innerHTML = "Already Bookmarked";
                         bookButton.classList.remove("btn-primary");
-                        bookButton.classList.add("btn-default");
+                        bookButton.classList.add("btn-success");
 
                         //북마크 목록에 추가
                         bookmarkList.push(obj.lbrry_seq_no);
