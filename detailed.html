@@ -52,7 +52,16 @@
                 공공도서관 상세정보
             </h1>
             <br />
-            <button type="button" id="bookmarkButton" class="btn btn-primary" data-bs-toggle="button" autocomplete="off" aria-pressed="false">Bookmark</button>
+            <button
+                type="button"
+                id="bookmarkButton"
+                class="btn btn-primary"
+                data-bs-toggle="button"
+                autocomplete="off"
+                aria-pressed="false"
+            >
+                Bookmark
+            </button>
             <table class="table table-bordered table-hover">
                 <tbody id="info"></tbody>
             </table>
@@ -81,42 +90,56 @@
         <script type="test/javascript" scr="main.js"></script>
         <script>
             function bookmark(obj) {
-                let bookButton = document.querySelector('#bookmarkButton');
-                let bookmarkList = JSON.parse(localStorage.getItem("bookmarkData")); 
+                let bookButton = document.querySelector("#bookmarkButton");
+                let bookmarkList = JSON.parse(
+                    localStorage.getItem("bookmarkData")
+                );
 
                 if (bookmarkList.includes(obj.lbrry_seq_no)) {
                     bookButton.classList.add("activate");
                     bookButton.ariaPressed = "true";
-                    bookButton.innerHTML = "Already Bookmarked"
+                    bookButton.innerHTML = "Already Bookmarked";
+                    bookButton.classList.remove("btn-primary");
+                    bookButton.classList.add("btn-success");
                 }
-                
+
                 bookButton.addEventListener("click", () => {
                     if (bookButton.classList.contains("activate")) {
                         //alert("Removed from Favorites")
                         bookButton.classList.remove("activate");
                         bookButton.classList.add("deactivate");
-                        bookButton.innerHTML = "Press to Bookmark"
+                        bookButton.innerHTML = "Press to Bookmark";
+                        bookButton.classList.remove("btn-success");
+                        bookButton.classList.add("btn-primary");
 
                         // 북마크 목록에서 제거
-                        for (let index = 0; index < bookmarkList.length; index++) {
+                        for (
+                            let index = 0;
+                            index < bookmarkList.length;
+                            index++
+                        ) {
                             if (obj.lbrry_seq_no === bookmarkList[index]) {
                                 bookmarkList.splice(index, 1);
                                 index--;
-                            } 
+                            }
                         }
                     } else {
                         //alert("Added to Favorites")
                         bookButton.classList.remove("deactivate");
                         bookButton.classList.add("activate");
-                        bookButton.innerHTML = "Already Bookmarked"
-                        
+                        bookButton.innerHTML = "Already Bookmarked";
+                        bookButton.classList.remove("btn-primary");
+                        bookButton.classList.add("btn-success");
+
                         //북마크 목록에 추가
                         bookmarkList.push(obj.lbrry_seq_no);
                     }
-                    console.log(bookmarkList)
-                    localStorage.setItem("bookmarkData", JSON.stringify(bookmarkList));
-                })
-                
+                    console.log(bookmarkList);
+                    localStorage.setItem(
+                        "bookmarkData",
+                        JSON.stringify(bookmarkList)
+                    );
+                });
             }
 
             function addToTable(obj) {
