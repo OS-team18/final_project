@@ -87,15 +87,17 @@
                 if (bookmarkList.includes(obj.lbrry_seq_no)) {
                     bookButton.classList.add("activate");
                     bookButton.ariaPressed = "true";
-                    alert("This lib is bookmarked")
+                    bookButton.innerHTML = "Already Bookmarked"
                 }
                 
                 bookButton.addEventListener("click", () => {
                     if (bookButton.classList.contains("activate")) {
-                        alert("Removed from Favorites")
+                        //alert("Removed from Favorites")
                         bookButton.classList.remove("activate");
                         bookButton.classList.add("deactivate");
+                        bookButton.innerHTML = "Press to Bookmark"
 
+                        // 북마크 목록에서 제거
                         for (let index = 0; index < bookmarkList.length; index++) {
                             if (obj.lbrry_seq_no === bookmarkList[index]) {
                                 bookmarkList.splice(index, 1);
@@ -103,10 +105,12 @@
                             } 
                         }
                     } else {
-                        alert("Added to Favorites")
+                        //alert("Added to Favorites")
                         bookButton.classList.remove("deactivate");
                         bookButton.classList.add("activate");
+                        bookButton.innerHTML = "Already Bookmarked"
                         
+                        //북마크 목록에 추가
                         bookmarkList.push(obj.lbrry_seq_no);
                     }
                     console.log(bookmarkList)
