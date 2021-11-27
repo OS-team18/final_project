@@ -35,14 +35,14 @@ local repository에서 html파일을 열 경우, json파일을 읽어오지 않�
 
 # 사용 영상
 
-[![samplevideo](doc/main_page.PNG)](https://www.youtube.com/watch?v=Hr6WYuyWJto)
+[![samplevideo](doc/main_page.PNG)](https://youtu.be/YHgEOzU47N0)
 
 ## 버전
 
 v1.0.0 - 도서관 정보 (이름 및 주소 (구))표로 표시 및 상세 정보 버튼 클릭시 도서관 상세정보 및 위치 지도에 표시  
 v2.0.0 - 메인 페이지 변경, 지도에서 도서관 찾기 기능 추가.  
 v2.1.0 - 검색 필터 기능 추가, 북마크 기능 추가.  
-v2.2.0 - 이용 가능 시간 필터 추가 예정
+(예정) v2.2.0 - 현재 시간 기준으로 이용 가능한 도서관 출력 추가
 
 ## API
 
