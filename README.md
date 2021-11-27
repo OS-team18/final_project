@@ -28,7 +28,7 @@ local repository에서 html파일을 열 경우, json파일을 읽어오지 않�
 5. 사용자가 상세정보 버튼을 클릭하면 더 많은 정보 (전화번호, 도서관 웹사이트, 운영시간 등)을 볼 수 있습니다.  
    왼쪽 위의 'Bookmark'를 통해 즐겨찾기에 추가할 수 있습니다. 해당 버튼을 클릭하면 'Already Bookmarked'로 바뀌며 해당 버튼을 클릭시 즐겨찾기에서 사라집니다.
    ![detailed](doc/detailed.png)
-6. '공공도서관 리스트' 사이트에서 '즐겨찾기'를 선택한다면 상세정보에서 'Bookmark'를 에 저장한 도서관들이 나열됩니다.
+6. '공공도서관 리스트' 사이트에서 '즐겨찾기'를 선택한다면 상세정보에서 'Bookmark'를 클릭한 도서관들이 나열됩니다.
    ![bookmark](doc/bookmark.PNG)
 7. 홈페이지 주소를 클릭하면 해당 도서관의 홈페이지로 이동합니다.
    ![exampleSite](doc/examplesite.png)
